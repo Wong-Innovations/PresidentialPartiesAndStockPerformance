@@ -1,5 +1,7 @@
 # PresidentialPartiesAndStockPerformance
 
+A Bruce Choe and Dylan Wong Research Project
+
 ## Table of Contents
 
 * [Abstract](#abstract)
@@ -37,7 +39,8 @@ The [NBER: National Bureau of Economic Research](https://www.nber.org/research/d
 <!-- METHODOLOGY -->
 ## Methodology
 
-
+We first calculate the change in economic indicator on a yearly and quarterly basis, then we sort these data points based on presidential party affiliation and compare the respective average growth. This is implemented by the following snippet of python code:
+https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/aff5aa3d0661e8f8dfda7234b4a89d7ffe239407/IXIC/IXIC.py#L119-L130
 
 <!-- RESULTS -->
 ## Results
