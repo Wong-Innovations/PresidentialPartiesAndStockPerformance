@@ -39,8 +39,7 @@ The [NBER: National Bureau of Economic Research](https://www.nber.org/research/d
 <!-- METHODOLOGY -->
 ## Methodology
 
-We first calculate the change in economic indicator on a yearly and quarterly basis, then we sort these data points based on presidential party affiliation and compare the respective average growth. This is implemented by the following snippet of python code:
-https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/aff5aa3d0661e8f8dfda7234b4a89d7ffe239407/IXIC/IXIC.py#L119-L130
+We first calculate the change in economic indicator on a yearly and quarterly basis, then we sort these data points based on presidential party affiliation and compare the respective average growth. This is implemented by the following snippet of [python code](https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/aff5aa3d0661e8f8dfda7234b4a89d7ffe239407/IXIC/IXIC.py#L119-L130). The next step is to calculate the likelihood that the Democratic average would vary from the Republican average by the amount observed. For this we calculate t-scores in both directions and use the resulting p-value to say with a given confidence that there is a resulting corelation. More can be learned about t-scores [here](https://www.statisticshowto.com/probability-and-statistics/t-distribution/t-score-formula/), we determined this statistical significance test to be the most appropriate for our data set since it take into account the degrees of freedom (number of samples). If we had a VERY large dataset a z-score would be just as appropriate since the data would be normally distributed.
 
 <!-- RESULTS -->
 ## Results
@@ -55,8 +54,13 @@ https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/
 <!-- CONTACT -->
 ## Contact
 
+Please contact us with any questions about our research or with any business related propositions.
 
+Bruce Choe: [Github](https://github.com/BruceChoe), [bruceleechoe@gmail.com](bruceleechoe@gmail.com)
+Dylan Wong: [Github](https://github.com/Wong-Innovations), [dylanwong@nevada.unr.edu](dylanwong@nevada.unr.edu)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
+Thank you to [UNR ACM](https://acm.cse.unr.edu/) for hosting the hackathon that provided the inspiration and served as a launch pad for this project.
+Additionally thank you to all the professors, colleagues, and family who support our education.
