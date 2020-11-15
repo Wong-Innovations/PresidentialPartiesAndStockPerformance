@@ -1,4 +1,4 @@
-# PresidentialPartiesAndStockPerformance
+# Presidential Parties And Stock Performance
 
 A Bruce Choe and Dylan Wong Research Project
 

@@ -107,44 +107,48 @@ rep = [1921,
         2008,
         2017,
         2018,
-        2019
+        2019,
+        2020
 ]
 
 years = np.array([])
+years2 = np.array([])
 dem_years2 = np.array([])
 rep_years2 = np.array([])
 
-with open('gdp.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile, delimiter=',')
-    first = True
+with open('djia.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    counter = 0
+    months_sum = 0
+    year_open = 0
     for row in reader:
-        for col in row:
-            if first:
-                first = False
-            else:
-                if row[col] != '':
-                    years = np.append(years, float(row[col]))
+        counter += 1
+        months_sum += float(row['Adj Close'])
+        if counter == 1:
+            year_open = float(row['Open'])
+        if (counter % 12 == 0):
+            years = np.append(years, months_sum/12)
+            years2 = np.append(years2, 100*( ( float(row['Close']) - year_open ) / year_open) )
+            months_sum = year_open = counter = 0
 
-    for j, y in np.ndenumerate(years):
-        if 1930+j[0] in dem:
+    for j, y in np.ndenumerate(years2):
+        if 1985+j[0] in dem:
             dem_years2 = np.append(dem_years2, y)
-        elif 1930+j[0] in rep:
+        elif 1985+j[0] in rep:
             rep_years2 = np.append(rep_years2, y)
-
+    
     print("Dem Mean: ", np.mean(dem_years2))
     print("Dem Std. Dev: ", np.std(dem_years2))
 
     print("Rep Mean: ", np.mean(rep_years2))
     print("Rep Std. Dev: ", np.std(rep_years2))
 
-    t = (np.mean(rep_years2)-np.mean(years))/(np.std(rep_years2)/(rep_years2.size**0.5))
+    t = (np.mean(rep_years2)-np.mean(years2))/(np.std(rep_years2)/(rep_years2.size**0.5))
 
     print("t_rep =", 2*t)
     print("DoF_rep = ", rep_years2.size)
 
-    t = (np.mean(dem_years2)-np.mean(years))/(np.std(dem_years2)/(dem_years2.size**0.5))
+    t = (np.mean(dem_years2)-np.mean(years2))/(np.std(dem_years2)/(dem_years2.size**0.5))
 
     print("t_dem =", 2*t)
     print("DoF_dem = ", dem_years2.size)
-
-    

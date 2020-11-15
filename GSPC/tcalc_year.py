@@ -120,15 +120,16 @@ with open('gspc.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     counter = 0
     months_sum = 0
-    months_delta = 0
+    year_open = 0
     for row in reader:
         counter += 1
         months_sum += float(row['Adj Close'])
-        months_delta += 100*((float(row['Close']) - float(row['Open']))/float(row['Open']))
+        if counter == 1:
+            year_open = float(row['Open'])
         if (counter % 12 == 0):
             years = np.append(years, months_sum/12)
-            years2 = np.append(years2, months_delta/12)
-            months_sum = months_delta = counter = 0
+            years2 = np.append(years2, 100*( ( float(row['Close']) - year_open ) / year_open) )
+            months_sum = year_open = counter = 0
 
     for j, y in np.ndenumerate(years2):
         if 1928+j[0] in dem:
@@ -142,6 +143,12 @@ with open('gspc.csv', newline='') as csvfile:
     print("Rep Mean: ", np.mean(rep_years2))
     print("Rep Std. Dev: ", np.std(rep_years2))
 
-    t = (np.mean(rep_years2)-np.mean(years2))/(np.std(rep_years2)/(44**0.5))
+    t = (np.mean(rep_years2)-np.mean(years2))/(np.std(rep_years2)/(rep_years2.size**0.5))
 
-    print("t =", 2*t)
+    print("t_rep =", 2*t)
+    print("DoF_rep = ", rep_years2.size)
+
+    t = (np.mean(dem_years2)-np.mean(years2))/(np.std(dem_years2)/(dem_years2.size**0.5))
+
+    print("t_dem =", 2*t)
+    print("DoF_dem = ", dem_years2.size)
