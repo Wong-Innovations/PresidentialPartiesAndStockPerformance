@@ -58,11 +58,10 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 <!-- LIMITATIONS -->
 ## LIMITATIONS
 While we are certain there is a correlation, we can not assume why that correlation exists. Is presidential party affiliation representing some external factor?
-More research is needed to understand if it's Democratic economic policies that are creating this effect. 
+More research is needed to understand if it's Democratic economic policies that are creating this effect, or if it's something else entirealy. 
+Possible speculation include: party control over congress since they have more control over economic plans, business cycles and periods of contraction/expansion, unemployment data, productivity spikes, effects of tax policies, and more. 
 
-Additionally, indvidual experience != gdp
-
-
+Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. The United States has technically been in a recession since   
 
 
 <!-- FUTURE PLANS -->
