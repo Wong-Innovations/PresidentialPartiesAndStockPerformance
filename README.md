@@ -77,16 +77,16 @@ As a small aside we also used NBER recession data to determine that in the last 
 <!-- LIMITATIONS -->
 ## Limitations
 
-While we are certain there is a correlation, we can not assume why that correlation exists. Is presidential party affiliation representing some external factor?
-More research is needed to understand if it's Democratic economic policies that are creating this effect, or if it's something else entirealy. 
-Possible speculation include: party control over congress since they have more control over economic plans, business cycles and periods of contraction/expansion, unemployment data, productivity spikes, effects of tax policies, and more. 
+While there is a correlation, we can not assume why that correlation exists. 
+More research is needed to understand if it's Democratic economic policies that are creating this effect, or if it's some external factor. 
+Possible speculation includes: party affiliation of congress, business cycles and periods of contraction/expansion, the misery index, oil prices, and more. 
 
-Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. The United States has technically been in a recession since 
+Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. For example. Ronal Reagan's presidency Even currently, the United States has technically been in a recession since February but stock data is still positive.   
 
 <!-- FUTURE PLANS -->
 ## Future Plans
 
-Our future plans with this project is to source more data. Data on other historical factors could help us shed further light on the multivariate reason for the D-R economic gap. Reliable data for these niche but impactful phenomena is often locked behind paywalls, so funding future research will be imperative in limiting the expansiveness of factors we consider to effect the historical D-R gap. This is an important project to us because prior research on this topic does not quantitatively support their speculations for the gap and we seek to be the first test several of the leading theories.
+Our future plans with this project is to source more data. Data on other historical factors could help us shed further light on the multivariate reason for the D-R economic gap. Reliable data for these niche but impactful phenomena is often locked behind paywalls, so funding future research will be imperative in limiting the expansiveness of factors we consider to effect the historical D-R gap. Additionally, having a professor ensure our work is mathematically sane would be invaluable. In general, we'd like to find a mentor to ensure we're doing our research properly. Since this was just a hackathon project, We still need to create a research proposal, apply for funding grants, and generally begin the process of formalizing our research. This is a process we're both new to, so any help is always appreciated. 
 
 <!-- CONTACT -->
 ## Contact
