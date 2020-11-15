@@ -57,6 +57,11 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 
 <!-- LIMITATIONS -->
 ## LIMITATIONS
+While we are certain there is a correlation, we can not assume why that correlation exists. Is presidential party affiliation representing some external factor?
+More research is needed to understand if it's Democratic economic policies that are creating this effect. 
+
+Additionally, indvidual experience != gdp
+
 
 
 
