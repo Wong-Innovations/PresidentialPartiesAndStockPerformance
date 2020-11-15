@@ -26,20 +26,21 @@ We will begin this project using open source stock and GDP data described below.
 
 ### GDP
 
-tbu
+Bureau of Economic Analysis, a federal statistical agency that provides formal data on the U.S. economy.
 
 ### Index Funds
 
 Using [Yahoo Finance](https://finance.yahoo.com) we can get reasonably accurate opening and closing prices to calculate percentage increase/decrease ourselves. However, yahoo finance provides very little information on the indexes beyond that.
 
 ### Recession / Expansion Periods
+National Bureau of Economic Research, a private nonprofit research organization. Has contracts with the Department of Commerce, very reliable data. 
 
 The [NBER: National Bureau of Economic Research](https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions) traditional definition of a recession is that it is a significant decline in economic activity that is spread across the economy and that lasts more than a few months. The committee's view is that while each of the three criteria—depth, diffusion, and duration—needs to be met individually to some degree, extreme conditions revealed by one criterion may partially offset weaker indications from another. While other economists define recession as two consecutive periods of decline in real gdp. We will be testing both cases.
 
 <!-- METHODOLOGY -->
 ## Methodology
 
-We first calculate the change in economic indicator on a yearly and quarterly basis, then we sort these data points based on presidential party affiliation and compare the respective average growth. This is implemented by the following snippet of [python code](https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/aff5aa3d0661e8f8dfda7234b4a89d7ffe239407/IXIC/IXIC.py#L119-L130). The next step is to calculate the likelihood that the Democratic average would vary from the Republican average by the amount observed. For this we calculate t-scores in both directions and use the resulting p-value to say with a given confidence that there is a resulting corelation. More can be learned about t-scores [here](https://www.statisticshowto.com/probability-and-statistics/t-distribution/t-score-formula/), we determined this statistical significance test to be the most appropriate for our data set since it take into account the degrees of freedom (number of samples). If we had a VERY large dataset a z-score would be just as appropriate since the data would be normally distributed.
+We first calculate the change in economic indicator on a yearly and quarterly basis, then we sort these data points based on presidential party affiliation and compare the respective average growth. To calculate real gdp, we take percent change from the preceding period. For stock data, we use open and adjusted close prices to determine annual total returns. We account for stock splits, dividends, and rights offerings. This is implemented by the following snippet of [python code](https://github.com/Wong-Innovations/PresidentialPartiesAndStockPerformance/blob/aff5aa3d0661e8f8dfda7234b4a89d7ffe239407/IXIC/IXIC.py#L119-L130). The next step is to calculate the likelihood that the Democratic average would vary from the Republican average by the amount observed. For this we calculate t-scores in both directions and use the resulting p-value to say with a given confidence that there is a resulting corelation. More can be learned about t-scores [here](https://www.statisticshowto.com/probability-and-statistics/t-distribution/t-score-formula/), we determined this statistical significance test to be the most appropriate for our data set since it take into account the degrees of freedom (number of samples). If we had a VERY large dataset a z-score would be just as appropriate since the data would be normally distributed.
 
 <!-- RESULTS -->
 ## Results
@@ -51,6 +52,13 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 | NASDAQ       | +20.02% (2.72) | +7.90% (2.20) | 12.12%     | 0.0125  |
 | Dow Jones    | +9.96% (2.72)  | +6.27% (1.69) | 3.69%      | 0.0303  |
 | Russell 3000 | +14.00% (2.63) | +6.05% (1.72) | 7.95%      | 0.0305  |
+
+95% certainty that presidential party affiliation is correlated with the performance of the U.S. economy.
+
+<!-- LIMITATIONS -->
+## LIMITATIONS
+
+
 
 <!-- FUTURE PLANS -->
 ## Future Plans
