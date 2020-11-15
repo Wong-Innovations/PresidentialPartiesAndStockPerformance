@@ -8,9 +8,10 @@ A Bruce Choe and Dylan Wong Research Project
 * [Sourcing Data](#sourcing-data)
   * [GDP](#gdp)
   * [Index Funds](#index-funds)
-  * [Recession / Expansion Periods](#recession-expansion)
+  * [Recession / Expansion Periods](#recession-/-expansion-periods)
 * [Methodology](#methodology)
 * [Results](#results)
+* [Limitations](#limitations)
 * [Future Plans](#future-plans)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -26,7 +27,7 @@ We will begin this project using open source stock and GDP data described below.
 
 ### GDP
 
-Bureau of Economic Analysis, a federal statistical agency that provides formal data on the U.S. economy.
+[Bureau of Economic Analysis](https://apps.bea.gov/iTable/index_nipa.cfm), a federal statistical agency that provides formal data on the U.S. economy.
 
 ### Index Funds
 
@@ -45,6 +46,18 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 <!-- RESULTS -->
 ## Results
 
+Each folder in the repository consists of the source data, 1-2 python files which sort and average the data, and an index.html file which uses Chart.JS to visualize the data.
+
++-- IXIC
+|   +-- index.html
+|   +-- ixic.csv
+|   +-- IXIC.py
+|   +-- tcalc_year.py
++-- ...
++-- README.md
+
+Below is a table summarizing the findings of each python file. Values in () are the t-scores in each average.
+
 | Indicator    | Democratic     | Republican    | Difference | p-value |
 |--------------|----------------|---------------|------------|---------|
 | GDP          | +4.56% (3.26)  | +1.92% (4.78) | 2.64%      | 0.0006  |
@@ -55,19 +68,23 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 
 95% certainty that presidential party affiliation is correlated with the performance of the U.S. economy.
 
+Degrees of Freedom are omitted from the table but are used in tcalc_year.py to determine the p-values. Each p-value tells us the likelihood that we would observe the historical data given the null hypothesis is true, the null hypothesis in this case is that presidential party affiliation is not correlated with U.S. economic performance.
+
+As a small aside we also used NBER recession data to determine that in the last 105 years, 238 months were recessions and 71.84% of these months we during Republican terms. A t-test yields a p-value of 0.0001, so while we speculate this bares a significant weight in the difference between economic performance, we will require further research to find why the recessions are so skewed as well as what other variables are responsible for the D-R delta.
+
 <!-- LIMITATIONS -->
-## LIMITATIONS
+## Limitations
+
 While we are certain there is a correlation, we can not assume why that correlation exists. Is presidential party affiliation representing some external factor?
 More research is needed to understand if it's Democratic economic policies that are creating this effect, or if it's something else entirealy. 
 Possible speculation include: party control over congress since they have more control over economic plans, business cycles and periods of contraction/expansion, unemployment data, productivity spikes, effects of tax policies, and more. 
 
-Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. The United States has technically been in a recession since   
-
+Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. The United States has technically been in a recession since 
 
 <!-- FUTURE PLANS -->
 ## Future Plans
 
-
+Our future plans with this project is to source more data. Data on other historical factors could help us shed further light on the multivariate reason for the D-R economic gap. Reliable data for these niche but impactful phenomena is often locked behind paywalls, so funding future research will be imperative in limiting the expansiveness of factors we consider to effect the historical D-R gap. This is an important project to us because prior research on this topic does not quantitatively support their speculations for the gap and we seek to be the first test several of the leading theories.
 
 <!-- CONTACT -->
 ## Contact
