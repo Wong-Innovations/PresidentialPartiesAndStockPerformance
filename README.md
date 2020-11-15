@@ -9,7 +9,7 @@ A Bruce Choe and Dylan Wong Research Project
   * [GDP](#gdp)
   * [Index Funds](#index-funds)
   * [Recession / Expansion Periods](#recession-expansion)
-* [Methodology](#method)
+* [Methodology](#methodology)
 * [Results](#results)
 * [Future Plans](#future-plans)
 * [Contact](#contact)
@@ -44,7 +44,13 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 <!-- RESULTS -->
 ## Results
 
-
+| Indicator    | Democratic     | Republican    | Difference | p-value |
+|--------------|----------------|---------------|------------|---------|
+| GDP          | +4.56% (3.26)  | +1.92% (4.78) | 2.64%      | 0.0006  |
+| S&P 500      | +10.46% (2.29) | +4.75% (1.94) | 5.71%      | 0.0215  |
+| NASDAQ       | +20.02% (2.72) | +7.90% (2.20) | 12.12%     | 0.0125  |
+| Dow Jones    | +9.96% (2.72)  | +6.27% (1.69) | 3.69%      | 0.0303  |
+| Russell 3000 | +14.00% (2.63) | +6.05% (1.72) | 7.95%      | 0.0305  |
 
 <!-- FUTURE PLANS -->
 ## Future Plans
