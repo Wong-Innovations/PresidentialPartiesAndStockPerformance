@@ -18,7 +18,7 @@ A Bruce Choe and Dylan Wong Research Project
 
 <!-- ABOUT THE PROJECT -->
 ## Abstract
-The purpose of this research project is to determine if there is a correlation between presidential party affiliation and the performance of the U.S. economy? We will compare the behavior of key economic indicators such as the real GDP and Total Market Index Funds (such as the S&P 500, Dow Jones, et cetera). Then if we find a statistically significant difference in these factors based on historical presidential party affiliation, we will try to gain insight as to the reason for said difference. Economic expansion vs recession periods, presidential term lag factors via autocorrelation, and several other factors will be tested to explain the potential difference in economic performance during U.S. presidencies.
+The purpose of this research project is to determine if there is a correlation between presidential party affiliation and the performance of the U.S. economy? We will compare the behavior of key economic indicators such as the real GDP and Total Market Index Funds (such as the S&P 500, Dow Jones, et cetera). If we find a statistically significant difference in these factors based on historical presidential party affiliation, we will try to gain insight as to the reason for said difference. Economic expansion vs recession periods, presidential term lag factors via autocorrelation, and several other factors will be tested to explain the potential difference in economic performance during U.S. presidencies.
 
 <!-- SOURCING DATA -->
 ## Sourcing Data
