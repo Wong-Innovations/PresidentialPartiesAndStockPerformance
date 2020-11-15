@@ -81,7 +81,7 @@ While there is a correlation, we can not assume why that correlation exists.
 More research is needed to understand if it's Democratic economic policies that are creating this effect, or if it's some external factor. 
 Possible speculation includes: party affiliation of congress, business cycles and periods of contraction/expansion, the misery index, oil prices, and more. 
 
-Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. For example. Ronal Reagan's presidency Even currently, the United States has technically been in a recession since February but stock data is still positive.   
+Additionally, gdp and stock market data does not necessarily reflect the experience of an average person. GDP is a "measure of output, not of well-being". Currently, the United States has technically been in a recession since February but stock data is still positive.   
 
 <!-- FUTURE PLANS -->
 ## Future Plans
