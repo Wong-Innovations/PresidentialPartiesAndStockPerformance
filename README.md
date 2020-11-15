@@ -48,6 +48,7 @@ We first calculate the change in economic indicator on a yearly and quarterly ba
 
 Each folder in the repository consists of the source data, 1-2 python files which sort and average the data, and an index.html file which uses Chart.JS to visualize the data.
 
+```bash
 +-- IXIC
 |   +-- index.html
 |   +-- ixic.csv
@@ -55,6 +56,7 @@ Each folder in the repository consists of the source data, 1-2 python files whic
 |   +-- tcalc_year.py
 +-- ...
 +-- README.md
+```
 
 Below is a table summarizing the findings of each python file. Values in () are the t-scores in each average.
 
